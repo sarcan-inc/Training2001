@@ -5,12 +5,14 @@
         <ul>
           <li @click="currentComponent = 'Home'">Home</li>
           <li @click="currentComponent = 'About'">About</li>
-          <li @click="currentComponent = 'Blog'">Blog</li>
+          <li @click="currentComponent = 'BlogArchive'">Blog</li>
           <li @click="currentComponent = 'Inquiry'">Inquiry</li>
         </ul>
       </nav>
     </MyHeader>
-    <component v-bind:is="currentComponent"></component>
+    <keep-alive>
+      <component v-bind:is="currentComponent"></component>
+    </keep-alive>
   </div>
 </template>
 
@@ -19,7 +21,7 @@ import MyHeader from "./components/MyHeader.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
 import Inquiry from "./components/Inquiry.vue";
-import Blog from "./components/Blog.vue";
+import BlogArchive from "./components/BlogArchive.vue";
 
 export default {
   data: function() {
@@ -32,7 +34,7 @@ export default {
     Home,
     About,
     Inquiry,
-    Blog
+    BlogArchive
   }
 };
 </script>

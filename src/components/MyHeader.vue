@@ -13,5 +13,6 @@ header {
 header nav ul li {
   display: inline;
   padding: 5px 20px;
+  cursor: pointer;
 }
 </style>
